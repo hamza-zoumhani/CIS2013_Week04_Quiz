@@ -1,18 +1,31 @@
 #include <iostream>
 using namespace std;
 
+void fizz(){
+	cout << "Fizz" ;
+}
+
+void buzz(){
+	cout << "Buzz" ;
+}
+
+
 int main(){
 	
 	for(int n=1; n<101; n++){
 		if  (n%15==0){
-			cout << "FizzBuzz" << endl;
-		}else if (n%5==0){
-			cout << "Buzz" << endl;
+			fizz();
+			buzz();
 		}else if (n%3== 0){
-			cout << "Fizz" << endl;
-		}else{
-			cout << n << endl;
+			fizz();
 		}
+		else if (n%5==0){
+			buzz();
+		}
+		else{
+			cout << n;
+		}
+		cout << endl;
 	}
 	
 	return 0;
